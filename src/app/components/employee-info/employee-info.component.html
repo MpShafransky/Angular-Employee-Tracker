@@ -1,0 +1,10 @@
+<div class="employee">
+    <h3>{{employee.userId}} 
+        <fa-icon 
+        (click)="onDelete(employee)"
+        [ngStyle]="{'color': 'red'}" 
+        [icon]="faTimes">
+    </fa-icon>
+</h3>
+    <p>{{employee.jobTitleName}}</p>
+</div>
