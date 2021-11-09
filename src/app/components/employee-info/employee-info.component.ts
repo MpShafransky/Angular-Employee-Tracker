@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Employee } from 'src/app/Employee';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,6 +9,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class EmployeeInfoComponent implements OnInit {
   @Input() employee!: Employee
+  @Output() onDeleteEmployee: EventEmitter<Employee> = new EventEmitter();
   faTimes = faTimes;
 
   constructor() { }
@@ -16,7 +17,7 @@ export class EmployeeInfoComponent implements OnInit {
   ngOnInit(): void {}
 
   onDelete(employee: any) {
-    console.log(employee);
+    this.onDeleteEmployee.emit(employee);
   }
 
 }

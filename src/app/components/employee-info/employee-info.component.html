@@ -1,10 +1,18 @@
 <div class="employee">
-    <h3>{{employee.userId}} 
+    <h3>User Id: {{employee.id}} 
         <fa-icon 
         (click)="onDelete(employee)"
         [ngStyle]="{'color': 'red'}" 
         [icon]="faTimes">
     </fa-icon>
 </h3>
-    <p>{{employee.jobTitleName}}</p>
+    <p>Title: {{employee.jobTitleName}}</p>
+    <p>First: {{employee.firstName}}</p>
+    <p>Last: {{employee.lastName}}</p>
+    <p>Pref. Name: {{employee.preferredFullName}}</p>
+    <p>Code: {{employee.employeeCode}}</p>
+    <p>Region: {{employee.region}}</p>
+    <p>Phone: {{employee.phoneNumber}}</p>
+    <p>Email: {{employee.emailAddress}}</p>
 </div>
+

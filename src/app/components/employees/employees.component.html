@@ -1,3 +1,7 @@
-<app-employee-info *ngFor="let employee of employees" [employee]="employee"></app-employee-info>
+<app-employee-info 
+    *ngFor="let employee of employees" 
+    [employee]="employee" 
+    (onDeleteEmployee)="deleteEmployee(employee)">
+</app-employee-info>
 
 <!-- looping over employees and adding a prop of employee -->

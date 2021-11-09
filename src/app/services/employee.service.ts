@@ -15,4 +15,9 @@ export class EmployeeService {
   getEmployees(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.apiUrl);
   }
+
+  deleteEmployee(employee: Employee): Observable<Employee> {
+    const url = `${this.apiUrl}/${employee.id}`;
+    return this.http.delete<Employee>(url);
+  }
 }
