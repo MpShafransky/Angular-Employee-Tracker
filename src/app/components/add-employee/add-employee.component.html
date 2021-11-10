@@ -1,0 +1,39 @@
+<form *ngIf="showAddEmployee" class="add-form" (ngSubmit)="onSubmit">
+    <div class="form-control">
+        <label for="Employee">Employee</label>
+        <input type="text" name="id" [(ngModel)]="id" id="Employee" placeholder="Add New Employee" />
+    </div>
+    <div class="form-control">
+        <label for="title">Job Title</label>
+        <input type="text" name="jobTitleName" [(ngModel)]="jobTitleName" id="title" placeholder="Job Title" />      
+    </div>
+    <div class="form-control">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" [(ngModel)]="firstName" id="firstName" placeholder="First Name" />      
+    </div>
+    <div class="form-control">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" [(ngModel)]="lastName" id="lastName" placeholder="Last Name" />      
+    </div>
+    <div class="form-control">
+        <label for="fullName">Full Name</label>
+        <input type="text" name="preferredFullName" [(ngModel)]="preferredFullName" id="fullName" placeholder="Preferred Full Name" />      
+    </div>
+    <div class="form-control">
+        <label for="employeeCode">Employee Code</label>
+        <input type="text" name="employeeCode" [(ngModel)]="employeeCode" id="employeeCode" placeholder="Employee Code" />      
+    </div>
+    <div class="form-control">
+        <label for="region">Region</label>
+        <input type="text" name="region" [(ngModel)]="region" id="region" placeholder="Region" />      
+    </div>
+    <div class="form-control">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" name="phoneNumber" [(ngModel)]="phoneNumber" id="phoneNumber" placeholder="Phone Number" />      
+    </div>
+    <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" name="emailAddress" [(ngModel)]="emailAddress" id="email" placeholder="Email Address" />      
+    </div>
+    <input type="submit" value="Save Employee" class="btn btn-block" />
+</form>
