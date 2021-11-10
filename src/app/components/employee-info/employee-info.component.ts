@@ -21,3 +21,5 @@ export class EmployeeInfoComponent implements OnInit {
   }
 
 }
+
+// Event emitter created for delete request. "X" icon used for delete button.//

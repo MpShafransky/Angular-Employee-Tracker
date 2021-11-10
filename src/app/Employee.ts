@@ -9,3 +9,5 @@ export interface Employee {
     phoneNumber: string;
     emailAddress: string;
 }
+
+// Parsing JSON data. 

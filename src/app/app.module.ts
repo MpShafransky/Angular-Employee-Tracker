@@ -32,3 +32,5 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// Any module added to Application must be added to "imports" list for functionalty.

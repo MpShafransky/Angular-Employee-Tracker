@@ -24,3 +24,5 @@ export class EmployeesComponent implements OnInit {
   }
 
 }
+
+// Filters each employees "ID" that that the correct id will be deleted when clicked on.

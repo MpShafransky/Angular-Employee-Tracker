@@ -21,3 +21,5 @@ export class EmployeeService {
     return this.http.delete<Employee>(url);
   }
 }
+
+// links the database through a API url. Once linked, the url(database) is referenced the developer can then access the employee id for GET and DELETE requests.

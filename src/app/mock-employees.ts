@@ -36,3 +36,6 @@ export const EMPLOYEES: Employee[] = [
       }
     ]
   
+    // List of Employees which will be used as a reference in components.
+
+    // This is not the JSON data that the application is pulling, Comments are not allowed in JSON formatting but hat list can be found in "employees.json"

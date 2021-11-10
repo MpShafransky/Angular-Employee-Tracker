@@ -43,7 +43,7 @@ export class AddEmployeeComponent implements OnInit {
   // };
 
   
- 
+
 
   onSubmit() {
     if (!this.id) {
@@ -55,3 +55,5 @@ export class AddEmployeeComponent implements OnInit {
   
 
 }
+
+// Thows error over declaration, out of my realm of knowledge. Moved onto next step and will backtrack to avoid too much time on one component//
