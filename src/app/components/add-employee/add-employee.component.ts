@@ -11,17 +11,17 @@ import { Subscription } from 'rxjs';
 })
 export class AddEmployeeComponent implements OnInit {
   @Output() onAddEmployee: EventEmitter<Employee> = new EventEmitter();
-    id: string | undefined;
-    jobTitleName: string | undefined;
-    firstName: string | undefined; 
-    lastName: string | undefined;
-    preferredFullName: string | undefined;
-    employeeCode: string | undefined;
-    region: string | undefined;
-    phoneNumber: string | undefined;
-    emailAddress: string | undefined;
-    showAddEmployee: boolean | undefined;
-    subscription: Subscription | undefined;
+    id!: string;
+    jobTitleName!: string;
+    firstName!: string; 
+    lastName!: string;
+    preferredFullName!: string;
+    employeeCode!: string;
+    region!: string;
+    phoneNumber!: string;
+    emailAddress!: string;
+    showAddEmployee?: boolean;
+    subscription: Subscription;
 
 
   constructor(private uiService: UiService) { 
@@ -31,16 +31,7 @@ export class AddEmployeeComponent implements OnInit {
   
  ngOnInit(): void {
   }
-  // readonly newEmployee = {
-  //   id: this.id,
-  //   jobTitleName: this.jobTitleName,
-  //   firstName: this.firstName,
-  //   lastName: this.lastName,
-  //   preferredFullName: this.preferredFullName,
-  //   employeeCode: this.employeeCode,
-  //   phoneNumber: this.phoneNumber,
-  //   emailAddress: this.emailAddress
-  // };
+ 
 
   
 
@@ -50,10 +41,37 @@ export class AddEmployeeComponent implements OnInit {
       alert('Please add an Employee!');
       return;
     }
+
+  const newEmployee = {
+    
+    id: this.id,
+    jobTitleName: this.jobTitleName,
+    firstName: this.firstName,
+    lastName: this.lastName,
+    preferredFullName: this.preferredFullName,
+    employeeCode: this.employeeCode,
+    region: this.region,
+    phoneNumber: this.phoneNumber,
+    emailAddress: this.emailAddress,
+  };
+
+    this.onAddEmployee.emit(newEmployee);
+  
+    this.id = '';
+    this.jobTitleName = '';
+    this.firstName = '';
+    this.lastName = '';
+    this.preferredFullName = '';
+    this.employeeCode = '';
+    this.region = '';
+    this.phoneNumber = '';
+    this.emailAddress = '';
+
+    }
   }
 
   
 
-}
+
 
 // Thows error over declaration, out of my realm of knowledge. Moved onto next step and will backtrack to avoid too much time on one component//

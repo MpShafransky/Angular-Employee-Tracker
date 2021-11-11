@@ -23,6 +23,10 @@ export class EmployeesComponent implements OnInit {
 
   }
 
+  addEmployee(employee: Employee) {
+    this.employeeService.addEmployee(employee).subscribe((employee) => (this.employees.push(employee)));
+  }
+
 }
 
 // Filters each employees "ID" that that the correct id will be deleted when clicked on.
